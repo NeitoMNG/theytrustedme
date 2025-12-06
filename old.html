@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Old Players and Staff</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">They trust(ed) me</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" id="nav-home">Home</a></li>
+          <li><a href="actual.html" id="nav-actual">Actual Players and Staff</a></li>
+          <li><a href="old.html" id="nav-old" class="active">Old Players and Staff</a></li>
+          <li><a href="contact.html" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang-selector">
+        <button onclick="changeLanguage('fr')">FR</button>
+        <button onclick="changeLanguage('en')" class="active">EN</button>
+        <button onclick="changeLanguage('es')">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="players-section">
+      <h2 class="old-title">Old Players and Staff</h2>
+      <div class="players-cards" id="players-cards">
+        <!-- Cards générées par players.js -->
+      </div>
+    </section>
+  </main>
+
+  <script src="js/translate.js"></script>
+  <script src="js/players.js" data-page="old"></script>
+</body>
+</html>
