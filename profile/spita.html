@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spita - Profile</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <style>
+    .profile-card .profile-name,
+    .profile-card .profile-role,
+    .profile-card .profile-description { text-align: center; }
+    .other-profiles .player-card { text-decoration: none; color: inherit; }
+    .other-profiles h2 { text-align: center; margin-bottom: 25px; }
+    .other-profiles .players-cards { justify-content: center; display: flex; flex-wrap: wrap; gap: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">They trust(ed) me</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html" id="nav-home">Home</a></li>
+          <li><a href="../actual.html" id="nav-actual">Actual Players and Staff</a></li>
+          <li><a href="../old.html" id="nav-old">Old Players and Staff</a></li>
+          <li><a href="../contact.html" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang-selector">
+        <button onclick="changeLanguage('fr')">FR</button>
+        <button onclick="changeLanguage('en')" class="active">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="profile-section">
+      <div class="profile-card">
+        <div class="profile-photo" style="background-image: url('../assets/spita.jpg');"></div>
+        <h2 class="profile-name">Spita</h2>
+        <h3 class="profile-role">Player</h3>
+        <p class="profile-description">Division 1 Player (Fortnite) - Represent @OneUp_Esports.</p>
+        <div class="profile-socials">
+          <a href="https://twitter.com/SpitaFN" target="_blank"><img src="../assets/twitter.svg" alt="Twitter"></a>
+          <a href="https://twitch.tv/spitafn" target="_blank"><img src="../assets/twitch.svg" alt="Twitch"></a>
+          <a href="https://fortnitetracker.com/profile/all/RN%20spituhǃ/events" target="_blank"><img src="../assets/fortnitetracker.svg" alt="Tracker"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="other-profiles">
+      <h2>Other Profiles</h2>
+      <div class="players-cards">
+        <a href="flexpito.html" class="player-card"><img src="../assets/flexpito.jpg" alt="Flexpito"><h3>Flexpito</h3><p>Player</p></a>
+        <a href="drizz.html" class="player-card"><img src="../assets/drizz.jpg" alt="Drizz"><h3>Drizz</h3><p>Analyst</p></a>
+        <a href="ratas.html" class="player-card"><img src="../assets/ratas.jpg" alt="Ratas"><h3>Ratas</h3><p>Player</p></a>
+        <a href="linky.html" class="player-card"><img src="../assets/linky.jpg" alt="Linky"><h3>Linky</h3><p>Player</p></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/translate.js"></script>
+</body>
+</html>
