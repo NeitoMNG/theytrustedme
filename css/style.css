@@ -1,0 +1,673 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* ========== HEADER ========== */
+header {
+  background-color: #1b1b1b;
+  padding: 20px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  margin-bottom: 40px;
+}
+
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding-bottom: 4px;
+}
+
+nav a:hover,
+nav a.active {
+  color: #4caf50;
+  border-bottom: 2px solid #4caf50;
+}
+
+.lang-selector button {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.lang-selector button:hover,
+.lang-selector button.active {
+  color: #4caf50;
+}
+
+/* ========== MAIN HEIGHT FIX ========== */
+main {
+  min-height: calc(100vh - 80px); /* 80px = approx header height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== SECTION TITLES ========== */
+section h2 {
+  color: #4caf50;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  text-align: left;
+  width: 90%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========== ABOUT / MANAGER CARD ========== */
+.about-me {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 60px auto;
+  text-align: left;
+}
+
+.manager-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.manager-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #333;
+}
+
+.manager-text {
+  flex: 1;
+}
+
+.manager-name {
+  font-size: 1.7rem;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.manager-role {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.manager-description {
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.manager-socials img {
+  width: 32px;
+  height: 32px;
+  margin-right: 14px;
+  transition: transform 0.3s;
+}
+
+.manager-socials img:hover {
+  transform: scale(1.2);
+}
+
+/* ========== COLLABORATIONS / PLAYERS LIST ========== */
+.collaborations,
+.players-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 80px auto;
+  text-align: left;
+}
+
+.collab-cards,
+.players-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.collab-card,
+.player-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collab-card:hover,
+.player-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.collab-card img,
+.player-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.collab-card h3,
+.player-card h3 {
+  color: #4caf50;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.collab-card p,
+.player-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 10px;
+  height: 35px;
+  text-align: center;
+}
+
+/* Social icons */
+.collab-card .socials,
+.player-card .socials {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.collab-card .socials img,
+.player-card .socials img {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.3s;
+}
+
+.collab-card .socials img:hover,
+.player-card .socials img:hover {
+  transform: scale(1.2);
+}
+
+/* ========== CONTACT PAGE ========== */
+.contact-section {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+  background: #1e1e1e;
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: 500;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  resize: none;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #43a047;
+}
+
+.contact-socials {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contact-socials img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s;
+}
+
+.contact-socials img:hover {
+  transform: scale(1.2);
+}
+
+/* ========== PROFILE PAGE ========== */
+.profile-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.profile-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #555;
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-card .profile-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 15px;
+  border: 2px solid #888;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+.profile-card .profile-name {
+  font-size: 2rem;
+  color: #ccc;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.profile-card .profile-role {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.profile-card .profile-description {
+  font-size: 1rem;
+  color: #eee;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.profile-card .profile-socials {
+  display: flex;
+  gap: 25px;
+}
+
+.profile-card .profile-socials img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.profile-card .profile-socials img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px #4caf50);
+}
+
+/* ========== OTHER PROFILES SECTION ========== */
+.other-profiles {
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto 80px auto;
+  text-align: center;
+}
+
+.other-profiles h2 {
+  font-size: 1.8rem;
+  color: #4caf50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.other-profiles .players-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.other-profiles .player-card {
+  width: 220px;
+  text-align: center;
+  border-radius: 15px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.other-profiles .player-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.other-profiles .player-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ====================== */
+/* REMOVE UNDERLINE LINKS */
+/* ====================== */
+.player-card, 
+.collab-card {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+a.player-card,
+a.collab-card {
+  display: block;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.player-card .socials a,
+.collab-card .socials a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  background-color: #1b1b1b;
+  color: #e0e0e0;
+  border-top: 2px solid #333;
+  margin-top: auto;
+  padding: 40px 0 20px 0;
+}
+
+/* ========== FOOTER LEGAL SECTION ========== */
+.footer-legal {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+}
+
+.footer-legal h4 {
+  color: #4caf50;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.legal-item {
+  color: #bbb;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.legal-item strong {
+  color: #4caf50;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.legal-item a {
+  color: #4caf50;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.legal-item a:hover {
+  color: #66bb6a;
+  text-decoration: underline;
+}
+
+/* ========== FOOTER BOTTOM ========== */
+.footer-bottom {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets et petits écrans (900px et moins) */
+@media (max-width: 900px) {
+  .manager-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .manager-photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .collab-cards,
+  .players-cards,
+  .other-profiles .players-cards {
+    justify-content: center;
+  }
+
+  .collab-card,
+  .player-card,
+  .other-profiles .player-card {
+    width: 85%;
+  }
+
+  .contact-section {
+    padding: 25px;
+  }
+
+  .profile-card {
+    padding: 25px;
+  }
+
+  .profile-card .profile-photo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-card .profile-name {
+    font-size: 1.7rem;
+  }
+
+  .profile-card .profile-role {
+    font-size: 1.1rem;
+  }
+
+  .profile-card .profile-description {
+    font-size: 0.95rem;
+  }
+
+  .profile-card .profile-socials img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Mobile et tablettes (768px et moins) */
+@media (max-width: 768px) {
+  /* Header mobile */
+  header {
+    padding: 15px 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .lang-selector {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .lang-selector button {
+    font-size: 0.9rem;
+  }
+
+  /* Footer mobile */
+  .site-footer {
+    padding: 30px 0 15px 0;
+  }
+
+  .footer-legal {
+    padding: 20px 15px;
+    margin-bottom: 15px;
+  }
+
+  .footer-legal h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .legal-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .legal-item {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding-top: 15px;
+  }
+}
+
+/* Petits téléphones (420px et moins) */
+@media (max-width: 420px) {
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  /* Footer très petits écrans */
+  .footer-legal {
+    padding: 15px 10px;
+    border-radius: 8px;
+  }
+
+  .footer-legal h4 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .legal-item {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .legal-item strong {
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+    padding-top: 12px;
+  }
+}
